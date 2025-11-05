@@ -98,7 +98,7 @@ const addAgendaItem = () => {
   fd.append("audience", formData.audience);
   fd.append("organizer", formData.organizer);
   fd.append("bookedSeats", formData.bookedSeats.toString());
-  fd.append("userEmail", "m.alishahzad2004@gmail.com");
+  fd.append("userEmail", email);
   fd.append("agenda", JSON.stringify(formData.agenda));
   fd.append("tags", JSON.stringify(formData.tags));
 
