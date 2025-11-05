@@ -14,6 +14,7 @@ const DeleteEvent = ({
             const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/events/${id}`, {
                 headers: {"x-api-key": process.env.NEXT_PUBLIC_API_KEY!},
                 method: 'DELETE',
+                cache: "no-store" 
             });
             const data = await response.json();
             setShow(false);

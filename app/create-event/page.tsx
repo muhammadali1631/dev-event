@@ -21,6 +21,7 @@ useEffect(() => {
   headers: {
     "x-api-key": process.env.NEXT_PUBLIC_API_KEY!, // agar public key use karni hai
   },
+  cache: "no-store" 
 });
         const data = await res.json()
         

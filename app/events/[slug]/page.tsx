@@ -41,7 +41,8 @@ const EventDetails = async({params}: {params:Promise<{slug:string}>}) => {
     try {
         const request = await fetch(`${BASE_URL}/api/events/${slug}`, {
             headers: {"x-api-key": process.env.NEXT_PUBLIC_API_KEY ?? "" },
-            next: { revalidate: 60 }
+            next: { revalidate: 60 },
+            cache: "no-store" 
         });
 
         if (!request.ok) {

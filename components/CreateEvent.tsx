@@ -107,6 +107,7 @@ const addAgendaItem = () => {
       headers:{"x-api-key": process.env.NEXT_PUBLIC_API_KEY!},
       method: "POST",
       body: fd,
+      cache: "no-store" 
     });
 
     const data = await res.json();

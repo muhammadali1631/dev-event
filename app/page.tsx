@@ -15,6 +15,7 @@ const page = async() => {
       headers: {
         "x-api-key": process.env.NEXT_PUBLIC_API_KEY ?? "",
       },
+      cache: "no-store" 
     })
     if (!response.ok) throw new Error(`fetch failed: ${response.status}`)
     const json = await response.json()

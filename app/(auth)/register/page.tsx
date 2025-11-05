@@ -24,6 +24,7 @@ export default function RegisterPage() {
     "x-api-key": process.env.NEXT_PUBLIC_API_KEY ?? "", // ✅ fallback to empty string
   } as HeadersInit, // ✅ explicitly cast
   body: JSON.stringify(formData),
+  cache: "no-store" 
 });
 
     const data = await res.json();
