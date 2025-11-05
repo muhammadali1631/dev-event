@@ -17,10 +17,10 @@ export default function LoginPage() {
     setError("");
 
     const res = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email,
       password,
-      callbackUrl: "/create-event",
+      callbackUrl: "https://dev-event-olive.vercel.app/create-event",
     });
 
     setLoading(false);
@@ -112,3 +112,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
